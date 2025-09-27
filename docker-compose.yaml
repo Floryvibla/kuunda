@@ -32,10 +32,6 @@ services:
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     command: pnpm run dockerstart
-    profiles:
-      - production
-      - 'host.docker.internal:host-gateway'
-    command: pnpm run dockerstart
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/"]
       interval: 30s
