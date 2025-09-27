@@ -26,7 +26,7 @@ RUN pnpm install --offline --frozen-lockfile
 RUN NODE_OPTIONS=--max-old-space-size=4096 pnpm run build
 
 # Keep only production deps for runtime
-RUN pnpm prune --prod --ignore-scripts
+# RUN pnpm prune --prod --ignore-scripts
 
 
 # ---- runtime stage ----
