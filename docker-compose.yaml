@@ -3,7 +3,6 @@ services:
   bolt:
     image: bolt.diy:latest
     pull_policy: build
-    platform: linux/arm64
     build:
       context: https://github.com/stackblitz-labs/bolt.diy.git#v0.0.6
       target: bolt-ai-production
