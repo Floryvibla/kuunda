@@ -19,8 +19,8 @@ services:
         
         COPY . .
         RUN git init && \
-            git config --global user.email "build@example.com" && \
-            git config --global user.name "Build Process" && \
+            git config --global user.email "flory.contato@gmail.com" && \
+            git config --global user.name "Flory" && \
             git add . && \
             git commit -m "Initial commit for build"
             
@@ -109,7 +109,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.bolt.entrypoints=websecure
-      - traefik.http.routers.bolt.rule=Host(`example.bolt.diy`)
+      - traefik.http.routers.bolt.rule=Host(`code.flory.dev`)
       - traefik.http.routers.bolt.tls=true
       - traefik.http.routers.bolt.tls.certresolver=coolify
       - traefik.http.services.bolt.loadbalancer.server.port=5173
